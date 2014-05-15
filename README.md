@@ -28,9 +28,9 @@ Build PhaseにRun Scriptを２つ、ビルドの前後にそれぞれ下記の�
 
 ### 解説
 
-準備１でInfo.plistのプリプロセスが有効になる。
-準備３で設定した`MARKETING_VERSION`と`BUILD_NUMBER`はプリプロセスの過程で置換される。
-置換する文字列は`Preprocessor Prefix File`として指定した`BuildNumber.h`にマクロとして記入しておく。
-`BuildNumber.h`をRun Scriptフェーズで生成する。
+準備１でInfo.plistのプリプロセスが有効になる。  
+準備３で設定した`MARKETING_VERSION`と`BUILD_NUMBER`はプリプロセスの過程で置換される。  
+置換する文字列は`Preprocessor Prefix File`として指定した`BuildNumber.h`にマクロとして記入しておく。  
+`BuildNumber.h`をRun Scriptフェーズで生成する。  
 このようにすることで、Info.plistを変更すること無く、置換元のBuildNumber.hを書き換えることで、バージョンを書き換えることが可能になる。
 `BuildNumber.h`は`.gitignore`で無視しておけるので、`BuildNumber.h`を書き換えても差分は出ない。
