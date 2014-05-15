@@ -151,7 +151,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1409C0CA19251472008ADD25 /* Build configuration list for PBXNativeTarget "BuildNumber" */;
 			buildPhases = (
-				14A8CAE319251FEF00FE2A44 /* ShellScript */,
 				1409C09A19251472008ADD25 /* Sources */,
 				1409C09B19251472008ADD25 /* Frameworks */,
 				1409C09C19251472008ADD25 /* Resources */,
@@ -249,19 +248,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "sh build_number.sh";
-		};
-		14A8CAE319251FEF00FE2A44 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "touch BuildNumber.h";
 		};
 /* End PBXShellScriptBuildPhase section */
 
