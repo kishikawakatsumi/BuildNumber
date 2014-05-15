@@ -10,7 +10,10 @@ BuildNumber
 ### 準備２
 
 準備１が済んだら、続けて下記の設定を追加する
-Build PhaseにRun Scriptをビルドの後に下記のように設定する。
+Build PhaseにRun Scriptをビルドの前後に下記のように設定する。
+
+- ビルド前
+  `touch BuildNumber/BuildNumber-Info.plist`
 
 - ビルド後
 
@@ -28,8 +31,12 @@ Build PhaseにRun Scriptをビルドの後に下記のように設定する。
 準備３で設定した`MARKETING_VERSION`と`BUILD_NUMBER`はプリプロセスの過程で置換される。  
 置換する文字列は`Preprocessor Prefix File`として指定した`BuildNumber.h`にマクロとして記入しておく。  
 `BuildNumber.h`をRun Scriptフェーズで生成する。  
+
 このようにすることで、Info.plistを変更すること無く、置換元のBuildNumber.hを書き換えることで、バージョンを書き換えることが可能になる。  
-`BuildNumber.h`は`.gitignore`で無視しておけるので、`BuildNumber.h`を書き換えても差分は出ない。
+`BuildNumber.h`は`.gitignore`で無視しておけるので、`BuildNumber.h`を書き換えても差分は出ない。  
+
+ビルド前に`touch BuildNumber/BuildNumber-Info.plist`としているのは、Info.plistの更新日付を新しくしないと、
+差分ビルドでInfo.plistが変更対象にならないので、クリーンビルドしないとバージョンの変更が反映されないため。
 
 ### 問題点
 初回だけは`BuildNumber.h`のファイルを作っておかないと(`touch BuildNumber.h`)、ビルドできない。  
