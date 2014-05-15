@@ -1,5 +1,7 @@
 #!/bin/sh
 
+touch BuildNumber/BuildNumber-Info.plist
+
 GIT_MARKETING_VERSION=`git describe --abbrev=0 --tags`
 GIT_BUILD_NUMBER=`git rev-parse --short HEAD`
 

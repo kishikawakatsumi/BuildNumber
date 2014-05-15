@@ -32,5 +32,5 @@ Build PhaseにRun Scriptをビルドの後に下記のように設定する。
 `BuildNumber.h`は`.gitignore`で無視しておけるので、`BuildNumber.h`を書き換えても差分は出ない。
 
 ### 問題点
-初回だけは`BuildNumber.h`のファイルを作っておかないと、ビルドできない。  
-Compile Soucesの前にRun Scriptで作るのでは遅くてダメだった。
+初回だけは`BuildNumber.h`のファイルを作っておかないと(`touch BuildNumber.h`)、ビルドできない。  
+Compile Soucesの前にRun Scriptで作るのでは遅くてダメだった。  
