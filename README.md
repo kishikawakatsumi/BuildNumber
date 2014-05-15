@@ -10,7 +10,7 @@ BuildNumber
 ### 準備２
 
 準備１が済んだら、続けて下記の設定を追加する
-Build PhaseにRun Scriptを２つ、ビルド前と後にして、それぞれ下記のように設定する。
+Build PhaseにRun Scriptを２つ、ビルドの前後にそれぞれ下記のように設定する。
 
 - ビルド前  
 
